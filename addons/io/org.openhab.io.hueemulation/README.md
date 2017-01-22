@@ -24,11 +24,11 @@ org.openhab.hueemulation:discoveryIp=192.168.1.100
 ```
 
 ## Device Tagging
-To expose an item on the service, apply a supported tag (which are "Lighting", "Switchable", "TargetTemperature") to it.  The item label will be used as the Hue device name.
+To expose an item on the service, apply a supported tag (which are "Lighting", "Switchable", "TargetTemperature") to it.  The item label will be used as the Hue device name. If a group is specified the tag goes after the group (see example on the Number item below.)
 
 ```
 Switch  TestSwitch1     "Kitchen Switch" [ "Switchable" ]
 Switch  TestSwitch2     "Bathroom" [ "Lighting" ]
 Dimmer  TestDimmer3     "Hallway" [ "Lighting" ]
-Number  TestNumber4     "Temperature Set Point" [ "TargetTemperature" ]
+Number  TestNumber4     "Temperature Set Point"  (gThermostat, gTemp)   [ "TargetTemperature" ]
 ```
